@@ -11,6 +11,10 @@ const paths = {
   wrench: 'M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.6-.6-.6-2.6z',
   shield: 'M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z',
   check: 'M5 12l5 5 9-10',
+  bolt: 'M13 2L4 14h7l-1 8 9-12h-7z',
+  bulb: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z',
+  plug: 'M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4',
+  home: 'M3 11l9-8 9 8M5 10v10h14V10',
 }
 
 function Icon({ name, size = 24 }) {
@@ -131,7 +135,7 @@ function App() {
       {/* HERO */}
       <section className="hero" id="top">
         <div className="container hero-inner">
-          <span className="badge">Gas Safe registered · Fully insured</span>
+          {b.badge && <span className="badge">{b.badge}</span>}
           <h1>{b.tagline}</h1>
           <p className="hero-sub">{b.intro}</p>
           <div className="hero-actions">
